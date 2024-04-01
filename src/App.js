@@ -51,7 +51,7 @@ function PartyThoughts(){
 let randomThought = ThoughtBubbles[Math.floor(Math.random() * ThoughtBubbles.length)];
 let randomNumber = (Math.floor(Math.random() * 4));
   return(
-    <h1>{BaldursBattlers[randomNumber].title} is thinking about {randomThought}.</h1>
+    <h2>{BaldursBattlers[randomNumber].title} is thinking about {randomThought}.</h2>
   )
 }
 
