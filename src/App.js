@@ -9,6 +9,8 @@ const BaldursBattlers = [
   { id: 4, title: 'Shadowheart', theme: 'Cleric', isAvailable: false },
 ];
 
+
+
 function PartyComp() {
   const ListPartyMembers = BaldursBattlers.map(list =>
     <li
@@ -20,6 +22,7 @@ function PartyComp() {
       {list.title}
     </li>
   );
+  
   return (
     <ul>{ListPartyMembers}</ul>
   )
@@ -31,7 +34,8 @@ function MagicButton() {
   function DoMagic() {
     let partyNames = new Array("Gale", "Astarion", "Shadowheart", "Karlach");
     setCount(count + 1);
-    alert('You just fed ' + partyNames[Math.floor(Math.random() * partyNames.length)] + ' a cookie');
+    let partyMemberFed = partyNames[Math.floor(Math.random() * partyNames.length)];
+    alert('You just fed ' + partyMemberFed + ' a cookie');
   }
 
   return (
@@ -39,6 +43,16 @@ function MagicButton() {
       Party members fed {count} times!
     </button>
   );
+}
+
+const ThoughtBubbles = ['fighting a mind flayer', 'wanting to go to bed super bad', 'needing to pet scratch and the owlbear cub']
+
+function PartyThoughts(){
+let randomThought = ThoughtBubbles[Math.floor(Math.random() * ThoughtBubbles.length)];
+let randomNumber = (Math.floor(Math.random() * 4));
+  return(
+    <h1>{BaldursBattlers[randomNumber].title} is thinking about {randomThought}.</h1>
+  )
 }
 
 
@@ -49,11 +63,13 @@ function App() {
        {/* <img src={logo} className="App-logo" alt="logo" /> */}
        {/* <p>Edit <code>src/App.js</code> and save to reload. </p> */}
 
-        <h1>Baldurs Gate Team Members, blue on the team, red on the bench!</h1>
+        <h1>Baldurs Gate Team Members: blue on the team, red on the bench!</h1>
         
         <PartyComp/>
 
         <MagicButton/>
+
+        <PartyThoughts/>
       </header>
     </div>
   );
