@@ -32,7 +32,7 @@ function MagicButton() {
   const [count, setCount] = useState(0);
 
   function DoMagic() {
-    let partyNames = new Array("Gale", "Astarion", "Shadowheart", "Karlach");
+    let partyNames = ["Gale", "Astarion", "Shadowheart", "Karlach"];
     setCount(count + 1);
     let partyMemberFed = partyNames[Math.floor(Math.random() * partyNames.length)];
     alert('You just fed ' + partyMemberFed + ' a cookie');
