@@ -45,7 +45,7 @@ function MagicButton() {
   );
 }
 
-const ThoughtBubbles = ['fighting a mind flayer', 'wanting to go to bed super bad', 'needing to pet scratch and the owlbear cub']
+const ThoughtBubbles = ['fighting a mind flayer', 'wanting to go to bed super bad', 'needing to pet Scratch and the owlbear cub']
 
 function PartyThoughts(){
 let randomThought = ThoughtBubbles[Math.floor(Math.random() * ThoughtBubbles.length)];
@@ -63,7 +63,7 @@ function App() {
        {/* <img src={logo} className="App-logo" alt="logo" /> */}
        {/* <p>Edit <code>src/App.js</code> and save to reload. </p> */}
 
-        <h1>Baldurs Gate Team Members: blue on the team, red on the bench!</h1>
+        <h1>Baldurs Gate Team Members: blue is on the team, red is on the bench!</h1>
         
         <PartyComp/>
 
